@@ -56,66 +56,60 @@ Output only a single word. Do not provide explanations or additional text.
 
 These projects demonstrate how prompt engineering can be used to classify customer reviews and customer queries using predefined categories.
 
-#3.Customer Query Classification Using Prompt Engineering
+# Customer Query Urgency Classification Using Prompt Engineering
 
-## 1. Problem Statement
+## Problem Statement
 
-An e-commerce company receives numerous customer queries related to orders, deliveries, payments, refunds, cancellations, and product defects.
+A customer support company receives thousands of queries daily. To prioritize customer requests, the company wants an AI system that identifies the urgency level of each query.
 
-The task is to design an effective prompt that classifies each customer query into the appropriate predefined category.
+The task is to design an effective prompt that analyzes a customer query and classifies its urgency.
 
-## 2. Input
+## Input
 
 A customer query in natural language.
 
-## 3. Output
+## Output
 
-A single word representing the category of the query.
+A single word representing the urgency level.
 
-## 4. Allowed Categories
+## Allowed Outputs
 
-- Delivery
-- Shipping
-- Refund
-- Payment
-- Cancellation
-- Defect
-- Return
-- Account
-- Unknown
+- High
+- Medium
+- Low
 
-## 5. Prompt
+## Prompt
 
-You are a customer query classification assistant.
+You are a customer query urgency classification assistant.
 
-Analyze the given customer query and classify it into exactly ONE of the following categories:
+Analyze the given customer query and classify its urgency into exactly ONE of the following categories:
 
-Delivery, Shipping, Refund, Payment, Cancellation, Defect, Return, Account, Unknown.
+High, Medium, Low.
 
-**Rules:**
+Rules:
 
-1. Understand the main intention of the customer.
-2. Select only one appropriate category.
-3. If the query does not match any category, choose Unknown.
-4. Output only the category name.
-5. Do not provide explanations, punctuation, or additional text.
+1. Understand the customer's problem and its urgency.
+2. Select only one appropriate urgency level.
+3. Choose High for critical or time-sensitive issues that require immediate attention.
+4. Choose Medium for issues that need attention but are not immediately critical.
+5. Choose Low for general questions or non-urgent requests.
+6. Output only the urgency level.
+7. Do not provide explanations, punctuation, or additional text.
 
-## 6. Test Cases and Expected Outputs
+## Test Cases
 
-| No. | Customer Query | Expected Output |
-|---|---|---|
-| 1 | My order has not arrived yet. | Delivery |
-| 2 | My package is stuck in transit. | Shipping |
-| 3 | I haven't received my money back. | Refund |
-| 4 | Money was deducted twice from my account. | Payment |
-| 5 | I want to cancel my order. | Cancellation |
-| 6 | The product I received is broken. | Defect |
-| 7 | I want to send this product back. | Return |
-| 8 | I cannot log in to my account. | Account |
-| 9 | What is the capital of India? | Unknown |
+| Customer Query | Expected Output |
+|---|---|
+| My bank account has been hacked, and money is being stolen. | High |
+| My internet has been down for the entire day, affecting my work. | High |
+| I haven't received my refund for the last seven days. | Medium |
+| Can you tell me how to update my profile picture? | Low |
+| I need to change my delivery address for an order arriving tomorrow. | High |
+| I would like to know about your available subscription plans. | Low |
+| I lost access to my account and cannot complete an urgent payment. | High |
 
-## 7. Conclusion
+## Conclusion
 
-Prompt engineering helps automate customer query classification by identifying the customer's intention and assigning the correct predefined category.
+Prompt engineering helps automate customer query urgency classification by analyzing the customer's problem and assigning an appropriate urgency level.
 
-This project demonstrates how AI prompts can be used to classify customer queries accurately and efficiently.
+This project demonstrates how AI prompts can help customer support companies prioritize requests and respond to urgent issues efficiently.
