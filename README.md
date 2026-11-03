@@ -55,3 +55,67 @@ Output only a single word. Do not provide explanations or additional text.
 ## Conclusion
 
 These projects demonstrate how prompt engineering can be used to classify customer reviews and customer queries using predefined categories.
+
+#3.Customer Query Classification Using Prompt Engineering
+
+## 1. Problem Statement
+
+An e-commerce company receives numerous customer queries related to orders, deliveries, payments, refunds, cancellations, and product defects.
+
+The task is to design an effective prompt that classifies each customer query into the appropriate predefined category.
+
+## 2. Input
+
+A customer query in natural language.
+
+## 3. Output
+
+A single word representing the category of the query.
+
+## 4. Allowed Categories
+
+- Delivery
+- Shipping
+- Refund
+- Payment
+- Cancellation
+- Defect
+- Return
+- Account
+- Unknown
+
+## 5. Prompt
+
+You are a customer query classification assistant.
+
+Analyze the given customer query and classify it into exactly ONE of the following categories:
+
+Delivery, Shipping, Refund, Payment, Cancellation, Defect, Return, Account, Unknown.
+
+**Rules:**
+
+1. Understand the main intention of the customer.
+2. Select only one appropriate category.
+3. If the query does not match any category, choose Unknown.
+4. Output only the category name.
+5. Do not provide explanations, punctuation, or additional text.
+
+## 6. Test Cases and Expected Outputs
+
+| No. | Customer Query | Expected Output |
+|---|---|---|
+| 1 | My order has not arrived yet. | Delivery |
+| 2 | My package is stuck in transit. | Shipping |
+| 3 | I haven't received my money back. | Refund |
+| 4 | Money was deducted twice from my account. | Payment |
+| 5 | I want to cancel my order. | Cancellation |
+| 6 | The product I received is broken. | Defect |
+| 7 | I want to send this product back. | Return |
+| 8 | I cannot log in to my account. | Account |
+| 9 | What is the capital of India? | Unknown |
+
+## 7. Conclusion
+
+Prompt engineering helps automate customer query classification by identifying the customer's intention and assigning the correct predefined category.
+
+This project demonstrates how AI prompts can be used to classify customer queries accurately and efficiently.
